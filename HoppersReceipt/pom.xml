@@ -8,11 +8,11 @@
 		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.jamesbonura.daikichiroutes_pathvariables</groupId>
-	<artifactId>daikichiroutes_pathvariables</artifactId>
+	<groupId>com.jamesbonura.HoppersReceipt</groupId>
+	<artifactId>HoppersReceipt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>daikichiroutes_pathvariables</name>
-	<description>Practice project for path variables</description>
+	<name>HoppersReceipt</name>
+	<description>Practice project for rendering data from controller</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
