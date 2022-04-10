@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+h1 {
+	color: pink;
+}
+
+.table {
+	border: 20px solid pink;
+	width: 500px;
+}
+
+tr {
+	border-bottom: 1px solid pink;
+}
+
