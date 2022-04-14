@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -65,5 +66,22 @@ public class HomeController {
 			expenseServ.createExpense(filledExpense);
 			return "redirect:/expenses";
 		}
+	}
+	
+	@RequestMapping("/expenses/{id}")
+	public String viewExpense(@PathVariable("id") Long id, Model model) {
+		   //GET ONE EXPENSE FROM DATABASE
+			Expense oneExpense = expenseServ.getExpense(id);
+			
+			//PASS ONE EXPENSE TO JSP
+			model.addAttribute("expense", oneExpense);
+			
+			return "show.jsp";
+	}
+	
+	@DeleteMapping("/expenses/{id}")
+	public String deleteExpense(@PathVariable("id")Long id) {
+		expenseServ.deleteExpense(id);
+		return "redirect:/expenses";
 	}
 }

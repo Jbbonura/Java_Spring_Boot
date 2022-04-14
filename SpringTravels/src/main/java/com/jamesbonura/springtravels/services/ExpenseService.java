@@ -28,4 +28,9 @@ public class ExpenseService {
 	public List<Expense> allExpenses() {
 		return expenseRepo.findAll();
 	}
+	
+	//delete
+	public void deleteExpense(Long id) {
+		expenseRepo.deleteById(id);
+	}
 }
